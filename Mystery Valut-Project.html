@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mystery Vault</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🕵️‍♂️ Mystery Vault</h1>
+  </header>
+
+  <main>
+    <!-- Login Section -->
+    <section id="login-section">
+      <h2>Login or Continue as Guest</h2>
+      <form id="login-form">
+        <label>
+          Name:
+          <input type="text" id="username" required placeholder="Enter your name" />
+        </label>
+
+        <label>
+          Country:
+          <select id="country" required>
+            <option value="">Select Country</option>
+            <option value="np" data-flag="https://flagcdn.com/w20/np.png">Nepal 🇳🇵</option>
+            <option value="us" data-flag="https://flagcdn.com/w20/us.png">United States 🇺🇸</option>
+            <option value="gb" data-flag="https://flagcdn.com/w20/gb.png">United Kingdom 🇬🇧</option>
+            <option value="fr" data-flag="https://flagcdn.com/w20/fr.png">France 🇫🇷</option>
+            <option value="in" data-flag="https://flagcdn.com/w20/in.png">India 🇮🇳</option>
+            <!-- Add more countries here -->
+          </select>
+          <img id="flag-preview" src="" alt="Flag" style="display:none;" />
+        </label>
+
+        <label>
+          Gender:
+          <select id="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <button type="submit">Enter</button>
+      </form>
+    </section>
+
+    <!-- Content Section -->
+    <section id="content-section" hidden>
+      <h2>Welcome, <span id="display-name"></span> from <img id="display-flag" src="" alt="Flag" class="flag-small" /> (<span id="display-country"></span>)</h2>
+      <button id="logout-btn">Logout</button>
+
+      <div id="content-buttons">
+        <button class="content-btn" data-content="plane">🛩️ The Mysterious Plane 914</button>
+        <button class="content-btn" data-content="simpsons">📺 The Predictor Series: The Simpsons</button>
+      </div>
+
+      <div id="content-display">
+        <article id="plane" class="content-box" hidden>
+          <h3>The Mysterious Plane 914</h3>
+          <p>Pan Am Flight 914 is one of the most intriguing aviation mysteries. The flight disappeared on July 2, 1955, flying from New York to Miami. It allegedly reappeared more than 20 years later in Caracas, Venezuela, with its crew and passengers alive but confused.</p>
+          <p>The aircraft was a Pan Am Boeing 377 Stratocruiser, known for luxury. Despite the stories, there are no official records confirming this event. Many experts consider it an urban legend fueled by sensationalism.</p>
+          <p>Eyewitness testimonies and supposed photographic evidence have circulated online, but none are verified. The story continues to inspire curiosity and debate.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Pan_Am_Boeing_377_Stratocruiser.jpg" alt="Pan Am Boeing 377 Stratocruiser" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Sim%C3%B3n_Bol%C3%ADvar_Airport_Caracas_2013_003.JPG" alt="Simón Bolívar Airport Caracas" />
+        </article>
+
+        <article id="simpsons" class="content-box" hidden>
+          <h3>The Predictor Series: The Simpsons</h3>
+          <p>The Simpsons has amazed audiences with its eerie ability to predict future events. For example, the 2000 episode “Bart to the Future” predicted Donald Trump's presidency long before it happened.</p>
+          <p>The series also featured smartwatches and the Higgs boson particle mass discovery years before they became reality. Many think the writers use deep knowledge and satire to foresee future trends.</p>
+          <p>Whether coincidence or insight, The Simpsons continues to entertain and fascinate with its predictions.</p>
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/02/The_Simpsons_logo.svg" alt="The Simpsons Logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Donald_Trump_official_portrait_2017.jpg" alt="Donald Trump" />
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Newson Adhikari | © 2025 Mystery Vault</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
