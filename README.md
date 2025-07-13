@@ -1,1 +1,1 @@
-# -Mystery-Vault
+# Mystery Vault
